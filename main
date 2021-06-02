@@ -1,0 +1,31 @@
+
+import itertools as it
+def licz(zb,l,z):
+	global a
+	a=it.product(zb,repeat=l)
+	for i in range(z):
+		yield(next(a))
+
+
+zb='Algorithm'#This is word we scrambling
+l=6 #letters in the word
+z=100# word options shows
+il=len(zb)**l # Maximum number of words made up of same letters 
+licz(zb,l,z)
+i=0
+for el in licz(zb,l,z):
+	i+=1
+	
+	print(el)
+	
+print(f"Maximum numbers of words possible to make from {zb} is {il}") 
+print(f"There is {l} letters in word {zb} and these are first {z} words you can make of these letters")
+																					
+	
+
+
+
+
+
+
+
